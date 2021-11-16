@@ -1,0 +1,14 @@
+{
+
+  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown"],
+
+	"pairs.enableCharacters": [
+		"(",
+		"[",
+		"{",
+		"'",
+		"\"",
+		"`"
+	]
+
+}
