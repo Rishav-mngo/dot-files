@@ -1,5 +1,4 @@
 set number
-:noh
 :set hidden
 :set relativenumber
 :set autoindent
@@ -13,6 +12,7 @@ set number
 " :set macligatures
 " :set guifont=Fira\ Code:h12
 :set guifont=Hack\ Regular\ Nerd\ Font\ Complete.tff
+source $VIMRUNTIME/mswin.vim
 
 
 :set encoding=UTF-8
@@ -33,7 +33,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'https://github.com/alvan/vim-closetag'
 Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-treesitter/nvim-treesitter'  " We recommend updating the parsers on update
 call plug#end()
+
 nnoremap <SPACE> <Nop>
 let mapleader=" "
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
@@ -42,6 +45,7 @@ nnoremap <C-n> :NERDTree<CR>
 nnoremap <leader>t :NERDTreeToggle<CR>
 noremap <leader>i :e ~/.config/nvim/init.vim<CR>
 noremap <leader>n :vs ~/notes<CR>
+noremap <silent> <esc> :noh<cr><esc>
 map gn :bn<CR>
 map gp :bp<CR>
 map gd :bd<CR>
@@ -54,4 +58,20 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
 :autocmd BufWritePost * Prettier
 
 
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
+:function Compile()
+:let fileName = expand('%:e')
+:if fileName == "c"
+:!gcc -o  a % && ./a
+:elseif fileName == "cpp"
+:!g++ -o a % && ./a
+:elseif fileName == "py"
+:!python %
+:endif
+:endfunction
+noremap <leader>c :call Compile()<cr>
