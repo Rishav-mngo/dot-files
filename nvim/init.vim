@@ -9,6 +9,17 @@ set number
 :set mouse=a
 :set nowrap
 :set si
+:set clipboard=unnamedplus
+
+""""""""""""Run these command for clipboard"""""""""""""""""""""""""""""
+" curl -sLo/tmp/win32yank.zip https://github.com/equalsraf/win32yank/releases/download/v0.0.4/win32yank-x64.zip
+" unzip -p /tmp/win32yank.zip win32yank.exe > /tmp/win32yank.exe
+" chmod +x /tmp/win32yank.exe
+" sudo mv /tmp/win32yank.exe /usr/local/bin/
+"
+"
+"
+"
 " :set macligatures
 " :set guifont=Fira\ Code:h12
 :set guifont=Hack\ Regular\ Nerd\ Font\ Complete.tff
@@ -17,6 +28,16 @@ source $VIMRUNTIME/mswin.vim
 
 :set encoding=UTF-8
 
+:set encoding=UTF-8
+:set encoding=UTF-8
+
+" let s:clip = '/mnt/c/Windows/System32/clip.exe' 
+" if executable(s:clip)
+"   augroup WSLYank
+"     autocmd!
+"     autocmd TextYankPost * call system('echo '.shellescape(join(v:event.regcontents, "\<CR>")).' | '.s:clip)
+"   augroup END
+" end
 
 call plug#begin()
 Plug 'https://github.com/vim-airline/vim-airline'
