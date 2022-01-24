@@ -1,0 +1,20 @@
+{
+  "color-theme": "material theme ocean",
+  "terminal.external.windowsExec": "C:\\WINDOWS\\System32\\wsl.exe",
+  "editor.fontFamily": "'JetBrains Mono',Consolas, 'Courier New', monospace",
+  "editor.fontSize": 16,
+  "editor.fontWeight": "bold",
+  "editor.fontLigatures": true,
+  "editor.letterSpacing": 0.5,
+  "terminal.integrated.fontFamily": "courier",
+  "editor.codeLensFontFamily": "'Agency FB'",
+  "vim.vimrc.enable": true,
+  "editor.smoothScrolling": true,
+  "vim.vimrc.path": "$HOME/.config/init.vim",
+  "glassit.alpha": 220,
+  "extension.used": ["Glasslt-VSC", "vim"],
+  "shortcuts": {
+    "focus into Side Bar": "CTRL + F",
+    "Toggle Side Bar": "CTRL + T"
+  }
+}
