@@ -1,0 +1,131 @@
+[
+  {
+    "key": "alt+s",
+    "command": "workbench.action.togglesidebarvisibility"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "-workbench.action.togglesidebarvisibility"
+  },
+  {
+    "key": "alt+f",
+    "command": "workbench.action.focussidebar"
+  },
+  {
+    "key": "ctrl+0",
+    "command": "-workbench.action.focussidebar"
+  },
+  {
+    "key": "d",
+    "command": "deletefile",
+    "when": "explorerviewletfocus && !inputfocus"
+  },
+  {
+    "key": "r",
+    "command": "renamefile",
+    "when": "explorerviewletvisible && filesexplorerfocus && !explorerresourceisroot && !explorerresourcereadonly && !inputfocus"
+  },
+  {
+    "key": "o",
+    "command": "list.select",
+    "when": "listfocus && !inputfocus"
+  },
+  {
+    "key": "n",
+    "command": "explorer.newfile",
+    "when": "explorerviewletfocus && !inputfocus"
+  },
+  {
+    "key": "m",
+    "command": "explorer.newfolder",
+    "when": "explorerviewletfocus && !inputfocus"
+  },
+  {
+    "key": "shift+alt+s",
+    "command": "workbench.action.toggleactivitybarvisibility"
+  },
+  {
+    "key": "shift+alt+t",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalprocesssupported || terminalwebextensioncontributedprofile"
+  },
+  {
+    "key": "ctrl+shift+`",
+    "command": "-workbench.action.terminal.new",
+    "when": "terminalprocesssupported || terminalwebextensioncontributedprofile"
+  },
+  {
+    "key": "ctrl+shift+t",
+    "command": "-workbench.action.reopenclosededitor"
+  },
+  {
+    "key": "ctrl+shift+s",
+    "command": "-workbench.action.files.savelocalfile",
+    "when": "remotefiledialogvisible"
+  },
+  {
+    "key": "ctrl+shift+s",
+    "command": "-workbench.action.files.saveas"
+  },
+  {
+    "key": "alt+t",
+    "command": "workbench.action.terminal.toggleterminal",
+    "when": "terminal.active"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "-workbench.action.terminal.toggleterminal",
+    "when": "terminal.active"
+  },
+  {
+    "key": "ctrl+f",
+    "command": "workbench.action.terminal.focusfind",
+    "when": "terminalfindfocused && terminalhasbeencreated || terminalfindfocused && terminalprocesssupported || terminalfocus && terminalhasbeencreated || terminalfocus && terminalprocesssupported"
+  },
+  {
+    "key": "ctrl+f",
+    "command": "-workbench.action.terminal.focusfind",
+    "when": "terminalfindfocused && terminalhasbeencreated || terminalfindfocused && terminalprocesssupported || terminalfocus && terminalhasbeencreated || terminalfocus && terminalprocesssupported"
+  },
+  {
+    "key": "ctrl+k e",
+    "command": "-workbench.files.action.focusopeneditorsview",
+    "when": "workbench.explorer.openeditorsview.active"
+  },
+  {
+    "key": "ctrl+shift+s",
+    "command": "workbench.action.files.saveas"
+  },
+  {
+    "key": "shift+alt+f",
+    "command": "-filesexplorer.findinfolder",
+    "when": "explorerresourceisfolder && explorerviewletvisible && filesexplorerfocus && !inputfocus"
+  },
+  {
+    "key": "shift+alt+f",
+    "command": "terminal.focus"
+  },
+  {
+    "key": "ctrl+shift+r",
+    "command": "workbench.action.openRecent"
+  },
+  {
+    "key": "ctrl+shift+r",
+    "command": "-editor.action.refactor",
+    "when": "editorhascodeactionsprovider && editortextfocus && !editorreadonly"
+  },
+  {
+    "key": "ctrl+shift+r",
+    "command": "-rerunsearcheditorsearch",
+    "when": "insearcheditor"
+  },
+  {
+    "key": "ctrl+shift+r",
+    "command": "-workbench.action.quickopennavigatepreviousinrecentfilespicker",
+    "when": "inquickopen && inrecentfilespicker"
+  },
+  {
+    "key": "ctrl+alt+n",
+    "command": "fileutils.newfile"
+  }
+]
